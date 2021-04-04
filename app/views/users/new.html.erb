@@ -4,13 +4,13 @@
 
 <h4 class="ui center aligned medium icon header">
   <i class="circular orange power off tiny icon"></i>
-  Log in to continue
+  Sign up to continue
 </h4>
 
 <div class="ui placeholder segment">
   <div class="ui two column very relaxed stackable grid">
     <div class="column">
-      <%= form_for(:session, url: login_path, html: { class: "ui form", role: "form" }) do |f| %>
+      <%= form_for(@user, url: signup_path, html: { class: "ui form", role: "form" }) do |f| %>
         <div class="field">
           <%= f.label :username %>
           <div class="ui left icon input">
@@ -25,11 +25,11 @@
             <i class="lock icon"></i>
           </div>
         </div>
-        <%= f.button "Login", class: "ui orange submit button" %>
+        <%= f.button "Sign up", class: "ui orange submit button" %>
       <% end %>
     </div>
     <div class="middle aligned column">
-      <%= link_to '<i class="signup icon"></i> Sign Up'.html_safe, signup_path, class: "ui big orange button" %>
+      <%= link_to '<i class="signup icon"></i> Log in'.html_safe, login_path, class: "ui big orange button" %>
     </div>
   </div>
   <div class="ui vertical divider">
